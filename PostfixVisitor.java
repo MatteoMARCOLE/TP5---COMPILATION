@@ -10,7 +10,10 @@ public class PostfixVisitor extends ExprBaseVisitor<String> {
         String id = ctx.ID().getText();
         String value = visit(ctx.expr());
 
-        return id + "=" + value;
+        String resultat = id + " " + value + " =";
+        System.out.println(resultat);
+
+        return resultat;
     }
 
     @Override
